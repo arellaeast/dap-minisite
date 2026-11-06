@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DAP Product Finder - Find the Right Product for Your Project</title>
+<meta name="description" content="Guided product finder in the DAP brand style. Answer three quick questions about your project and get the right DAP sealant, including the Alex Plus shower warning from DAP's own FAQ.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="finder.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap header-in">
+    <div class="logo" aria-label="DAP style logo">DAP<span class="logo-r">®</span></div>
+    <nav class="main-nav" aria-label="Main">
+      <span>Products</span><span>Resources</span><span>About</span>
+    </nav>
+    <div class="header-cta">Where to Buy</div>
+  </div>
+  <div class="experience-bar">
+    <div class="wrap exp-in">
+      <span class="exp-label">Choose your experience:</span>
+      <div class="exp-toggle" role="group" aria-label="Experience">
+        <button type="button" class="exp-btn active">I'm a Pro User</button>
+        <button type="button" class="exp-btn">I'm a DIY User</button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <p class="hero-kicker">On the job since 1865</p>
+    <h1>Find the right product<br>for your project</h1>
+    <p class="hero-sub">Three questions. Project, paint, joint size. Get the DAP sealant that fits, and a straight answer when the popular pick is the wrong one.</p>
+  </div>
+</section>
+
+<main class="wrap">
+  <section class="calc-card finder-card" aria-labelledby="finderTitle">
+    <div class="calc-head">
+      <div class="calc-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" width="26" height="26" fill="none"><circle cx="10.5" cy="10.5" r="6.5" stroke="#fff" stroke-width="2.6"/><line x1="15.5" y1="15.5" x2="21" y2="21" stroke="#fff" stroke-width="2.6" stroke-linecap="round"/></svg>
+      </div>
+      <div>
+        <h2 id="finderTitle">Product Finder</h2>
+        <p id="stepLabel">Step 1 of 3</p>
+      </div>
+      <div class="progress" aria-hidden="true"><span id="progressBar"></span></div>
+    </div>
+
+    <div id="step1" class="step">
+      <h3 class="q">What are you sealing?</h3>
+      <div class="options" role="group" aria-label="Project">
+        <button type="button" class="opt" data-q="project" data-value="shower"><strong>Shower &amp; Tub</strong><span>Re-caulking a shower, tub or surround</span></button>
+        <button type="button" class="opt" data-q="project" data-value="kitchen"><strong>Kitchen Sink &amp; Counters</strong><span>Splash zone: sinks, counters, backsplashes</span></button>
+        <button type="button" class="opt" data-q="project" data-value="windows"><strong>Windows &amp; Doors</strong><span>Exterior frames that move with the weather</span></button>
+        <button type="button" class="opt" data-q="project" data-value="trim"><strong>Trim &amp; Paint Prep</strong><span>Baseboards, molding and interior trim</span></button>
+        <button type="button" class="opt" data-q="project" data-value="exterior"><strong>Exterior Cracks &amp; Siding</strong><span>Siding joints and outside cracks</span></button>
+      </div>
+    </div>
+
+    <div id="step2" class="step" hidden>
+      <h3 class="q">Do you need to paint over it?</h3>
+      <div class="options two" role="group" aria-label="Paint">
+        <button type="button" class="opt" data-q="paint" data-value="yes"><strong>Yes, it gets painted</strong><span>The seal has to take paint and disappear</span></button>
+        <button type="button" class="opt" data-q="paint" data-value="no"><strong>No painting</strong><span>The sealant color is the finish</span></button>
+      </div>
+    </div>
+
+    <div id="step3" class="step" hidden>
+      <h3 class="q">How big is the joint?</h3>
+      <div class="options two" role="group" aria-label="Joint size">
+        <button type="button" class="opt" data-q="joint" data-value="standard"><strong>Standard</strong><span>Up to 1/2" wide and 1/2" deep</span></button>
+        <button type="button" class="opt" data-q="joint" data-value="wide"><strong>Wide or deep</strong><span>Over 1/2", or a deep gap with nothing behind it</span></button>
+      </div>
+    </div>
+
+    <div id="resultStep" class="step" hidden aria-live="polite">
+      <p class="result-eyebrow">Your match</p>
+      <h3 class="result-name" id="resultName"></h3>
+      <p class="result-tag" id="resultTag"></p>
+      <ul class="why" id="resultWhy"></ul>
+      <p class="warning" id="resultWarning" hidden></p>
+      <p class="secondary" id="resultSecondary" hidden></p>
+      <div class="actions">
+        <a class="btn-calc btn-link" href="https://arellaeast.github.io/dap-sealant-calculator/">Next: How many tubes do I need? →</a>
+        <button type="button" class="btn-reset" id="restartBtn">↺ Start over</button>
+      </div>
+      <p class="method">Demo rules are built from DAP published material: the Alex Plus FAQ on dap.com (including its shower answer and 30-minute paint time), DAP's own retailer replies, and each product line's stated use. A production finder would read these rules straight from PIM product data, which is exactly the job this role owns.</p>
+    </div>
+
+    <div class="finder-nav">
+      <button type="button" class="btn-reset" id="backBtn" hidden>← Back</button>
+    </div>
+  </section>
+
+  <section class="tips">
+    <article>
+      <h3>Why a finder?</h3>
+      <p>DAP's old Caulk + Sealant Selector still lives on a legacy site. GE Sealants puts its finder on its homepage. This moves the tool back where shoppers start.</p>
+    </article>
+    <article>
+      <h3>Why the warning?</h3>
+      <p>The top 1-star theme is the wrong product in the wrong place, like latex caulk in a shower. The finder stops that before the buy, not in a reply after the fail.</p>
+    </article>
+    <article>
+      <h3>What it feeds</h3>
+      <p>Every answer is product-discovery data: which projects people start, where they get stuck, and which warnings they hit. That is roadmap input for the Website Manager.</p>
+    </article>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p class="suite">Demo suite by Jacob East: <a href="https://arellaeast.github.io/dap-product-finder/">Product Finder</a> · <a href="https://arellaeast.github.io/dap-ask-an-expert/">Ask a DAP Expert</a> · <a href="https://arellaeast.github.io/dap-sealant-calculator/">Sealant Calculator</a></p>
+    <p><strong>Concept demo.</strong> This finder is an independent prototype built by Jacob East as a Website Manager application demo. It is not an official DAP product and is not affiliated with or endorsed by DAP Products Inc. or RPM International. Always check the label and technical data sheet for your specific job.</p>
+    <p class="foot-line">DAP style concept · On the job since 1865 · Baltimore, MD</p>
+  </div>
+</footer>
+
+<script src="logic.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

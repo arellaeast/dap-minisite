@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ask a DAP Expert - 24/7 Product Help (Concept Demo)</title>
+<meta name="description" content="Chat demo in the DAP brand style. Ask about showers, painting, coverage, cracking, mold and warranty, and get answers sourced from DAP's own FAQs, data sheets and support replies.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="chat.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap header-in">
+    <div class="logo" aria-label="DAP style logo">DAP<span class="logo-r">®</span></div>
+    <nav class="main-nav" aria-label="Main">
+      <span>Products</span><span>Resources</span><span>About</span>
+    </nav>
+    <div class="header-cta">Where to Buy</div>
+  </div>
+  <div class="experience-bar">
+    <div class="wrap exp-in">
+      <span class="exp-label">Choose your experience:</span>
+      <div class="exp-toggle" role="group" aria-label="Experience">
+        <button type="button" class="exp-btn active">I'm a Pro User</button>
+        <button type="button" class="exp-btn">I'm a DIY User</button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <p class="hero-kicker">On the job since 1865</p>
+    <h1>Ask a DAP Expert.<br>Any hour, any job.</h1>
+    <p class="hero-sub">DAP's experts are good. They are also human, and humans sleep. This assistant answers the repeat questions 24/7, straight from DAP's own FAQs, data sheets and support replies, and hands the hard ones to a person.</p>
+  </div>
+</section>
+
+<main class="wrap">
+  <section class="calc-card chat-card" aria-labelledby="chatTitle">
+    <div class="calc-head">
+      <div class="calc-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" width="26" height="26" fill="none"><path d="M4 5a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H9l-5 4V5z" fill="#fff"/></svg>
+      </div>
+      <div>
+        <h2 id="chatTitle">Ask a DAP Expert</h2>
+        <p><span class="dot" aria-hidden="true"></span> Online now. Answers cite their source.</p>
+      </div>
+    </div>
+
+    <div class="chat-log" id="chatLog" aria-live="polite"></div>
+
+    <div class="chips-row" id="chipsRow" aria-label="Suggested questions">
+      <button type="button">Can I use Alex Plus in a shower?</button>
+      <button type="button">How many tubes do I need?</button>
+      <button type="button">Why did my caulk crack?</button>
+      <button type="button">My clear caulk is still white. Why?</button>
+      <button type="button">How do I make a warranty claim?</button>
+      <button type="button">¿Puedo usar Alex Plus en la ducha?</button>
+    </div>
+
+    <form id="chatForm" class="chat-form">
+      <label class="sr" for="chatInput">Ask a question</label>
+      <input type="text" id="chatInput" placeholder="Ask about a product, a joint, a problem..." autocomplete="off">
+      <button type="submit" class="btn-calc chat-send">Ask →</button>
+    </form>
+    <p class="method">How this demo works: it is rule-based on purpose. Each answer is matched to a knowledge base entry written from DAP published material, and the source rides under the answer. Nothing is improvised. A production version would ground an AI assistant in the same FAQ and TDS corpus, with the same rule: cite it or do not say it. Gorilla's 24/7 AI assistant proves shoppers use this. DAP's expert knowledge is deeper. It just is not available at 11 pm before a Saturday job.</p>
+  </section>
+
+  <section class="tips">
+    <article>
+      <h3>Grounded, not guessing</h3>
+      <p>Every answer names its source: a dap.com FAQ, a data sheet, a warranty line, or a DAP support reply. Made-up product advice is worse than no advice.</p>
+    </article>
+    <article>
+      <h3>Built from real pain</h3>
+      <p>The question set comes from the 1-star reviews: cracking, washing away, mold, clear that stays white, claims that go nowhere. Answer them here and they never become reviews.</p>
+    </article>
+    <article>
+      <h3>Humans stay in the loop</h3>
+      <p>Anything outside the base gets a straight "I do not know" and the technical service number, 888-327-8477. The assistant clears the simple queue so experts handle the real problems.</p>
+    </article>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p class="suite">Demo suite by Jacob East: <a href="https://arellaeast.github.io/dap-product-finder/">Product Finder</a> · <a href="https://arellaeast.github.io/dap-ask-an-expert/">Ask a DAP Expert</a> · <a href="https://arellaeast.github.io/dap-sealant-calculator/">Sealant Calculator</a></p>
+    <p><strong>Concept demo.</strong> This assistant is an independent prototype built by Jacob East as a Website Manager application demo. It is not an official DAP product and is not affiliated with or endorsed by DAP Products Inc. or RPM International. Always check the label and technical data sheet for your specific job.</p>
+    <p class="foot-line">DAP style concept · On the job since 1865 · Baltimore, MD</p>
+  </div>
+</footer>
+
+<script src="kb.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
